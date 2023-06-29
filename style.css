@@ -204,7 +204,7 @@ button:hover {
 
 }
 
-.info-sub-box h5 {
+.info-sub-box h4 {
     font-size: 1.2em;
     margin-top: 0.5em;
     font-weight: 700;
@@ -219,7 +219,7 @@ button:hover {
     cursor: pointer;
 }
 
-.info-sub-box:hover h5 {
+.info-sub-box:hover h4 {
     color: var(--Soft-red);
     cursor: pointer;
 }
