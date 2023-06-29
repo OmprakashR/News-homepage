@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Off-white);
+    font-size: 15px;
+    line-height: 1.5;
+    transition: 0.6s all;
+    font-family: 'Inter', sans-serif;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.top-menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.top-menu ul li a {
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+}
+
+.top-menu ul li a:hover {
+    color: var(--Soft-red);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-5 {
+    margin: 4em 0;
+}
+
+.section-img {
+    background: var(--Soft-orange) url(./assets/images/image-web-3-desktop.jpg) no-repeat;
+    background-size: cover;
+    height: 310px;
+}
+
+.box {
+    display: grid;
+    gap: 3.2em;
+    grid-template-areas:
+        "one one four"
+        "two three four"
+    ;
+}
+
+.boxes:nth-of-type(1) {
+    grid-area: one;
+}
+
+.boxes:nth-of-type(2) {
+    grid-area: two;
+    
+    width: 339px
+}
+
+.boxes:nth-of-type(3) {
+    grid-area: three;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.boxes:nth-of-type(4) {
+    padding: 2em;
+    grid-area: four;
+    background-color: var(--Very-dark-blue);
+}
+
+.hilight {
+    color: var(--Soft-orange);
+    font-size: 2em;
+}
+
+.heading {
+    font-size: clamp(1.5rem, 4.5vw, 4rem);
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+    line-height: 0.95;
+}
+
+p {
+    font-size: 16px;
+    color: var(--Dark-grayish-blue);
+}
+
+button {
+    border: none;
+    background-color: var(--Soft-red);
+    padding: 0.8em 1.5em;
+    color: var(--Off-white);
+    transition: 0.6s all;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+button:hover {
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+    cursor: pointer;
+}
+
+.sub-box {
+    margin: 2em 0;
+}
+
+.sub-box h4 {
+    color: var(--Off-white);
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+.sub-box p {
+    font-size: 1em;
+    color: var(--Grayish-blue);
+}
+
+.small-boxes {
+    display: grid;
+    margin: 5em 0;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+
+.info-box {
+    display: grid;
+    column-gap: 1.5em;
+    grid-template-areas:
+        "One1 Two2"
+        "One1 Three3";
+
+}
+
+.info-sub-box:nth-of-type(1) {
+    grid-area: One1;
+
+}
+
+.info-sub-box:nth-of-type(2) {
+    grid-area: Two2;
+    font-size: 2.5em;
+    color: var(--Grayish-blue);
+    font-weight: 700;
+}
+
+.info-sub-box:nth-of-type(3) {
+    grid-area: Three3;
+}
+
+.info-box:nth-child(1) .info-sub-box:nth-child(1),
+.info-box:nth-child(2) .info-sub-box:nth-child(1),
+.info-box:nth-child(3) .info-sub-box:nth-child(1) {
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100px;
+}
+
+.info-box:nth-child(1) .info-sub-box:nth-child(1) {
+    background-image: url(./assets/images/image-retro-pcs.jpg);
+    background-size: cover;
+}
+
+.info-box:nth-child(2) .info-sub-box:nth-child(1) {
+    background-image: url(./assets/images/image-top-laptops.jpg);
+    background-size: cover;
+}
+
+.info-box:nth-child(3) .info-sub-box:nth-child(1) {
+    background-image: url(./assets/images/image-gaming-growth.jpg);
+    background-size: cover;    margin-left: -11px;
+
+}
+
+.info-sub-box h5 {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    font-weight: 700;
+}
+
+.info-sub-box p {
+    font-size: 0.9em;
+}
+
+.sub-box:hover h4 {
+    color: var(--Soft-orange);
+    cursor: pointer;
+}
+
+.info-sub-box:hover h5 {
+    color: var(--Soft-red);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+}
