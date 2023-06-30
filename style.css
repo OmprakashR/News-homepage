@@ -56,21 +56,31 @@ ol {
 }
 
 .my-5 {
-    margin: 4em 0;
+    margin: 0em 0;
+
 }
 
+a {
+
+    color: var(--Very-dark-blue);
+    text-decoration: none;
+}
 .section-img {
-    background: var(--Soft-orange) url(./assets/images/image-web-3-desktop.jpg) no-repeat;
+    background: var(--Soft-orange) url(./assets/images/image-web-3-mobile.jpg) no-repeat;
     background-size: cover;
-    height: 310px;
+    height: 300px;
+    width: 100%;
 }
 
 .box {
     display: grid;
     gap: 3.2em;
+    justify-content: center;
     grid-template-areas:
-        "one one four"
-        "two three four"
+        "one"
+        "two"
+        "three"
+        "four"
     ;
 }
 
@@ -80,13 +90,13 @@ ol {
 
 .boxes:nth-of-type(2) {
     grid-area: two;
-    
     width: 339px
 }
 
 .boxes:nth-of-type(3) {
     grid-area: three;
     display: flex;
+    gap: 2em;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
@@ -105,14 +115,14 @@ ol {
 }
 
 .heading {
-    font-size: clamp(1.5rem, 4.5vw, 4rem);
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
     font-weight: 800;
     color: var(--Very-dark-blue);
     line-height: 0.95;
 }
 
 p {
-    font-size: 16px;
+    font-size: 13px;
     color: var(--Dark-grayish-blue);
 }
 
@@ -150,8 +160,9 @@ button:hover {
 
 .small-boxes {
     display: grid;
+    gap: 1em;
     margin: 5em 0;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(1, 1fr)
 }
 
 
@@ -161,6 +172,7 @@ button:hover {
     grid-template-areas:
         "One1 Two2"
         "One1 Three3";
+    justify-content: flex-start;
 
 }
 
@@ -200,7 +212,8 @@ button:hover {
 
 .info-box:nth-child(3) .info-sub-box:nth-child(1) {
     background-image: url(./assets/images/image-gaming-growth.jpg);
-    background-size: cover;    margin-left: -11px;
+    background-size: cover;
+    margin-left: 0;
 
 }
 
@@ -224,10 +237,116 @@ button:hover {
     cursor: pointer;
 }
 
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1em 2em;
+}
+
+
+.d-mobile {
+    display: block;
+}
+
+.d-desktop {
+    display: none;
+}
+
+.menu-btn {
+    cursor: pointer;
+}
+
+
+.mobile-menu-backdroff {
+
+    position: fixed;
+    display: none;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu {
+    padding: 2em;
+    height: 100%;
+    background-color: var(--Off-white);
+    margin-left: 3em;
+}
+
+.close-icon {
+    cursor: pointer;
+    text-align: right;
+}
+
+.mobile-menu ul li {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
 @media (min-width: 768px) {
 
     .container {
         max-width: 1170px;
         margin: 0 auto;
+        padding: 0em 0em;
     }
+
+    .box {
+        display: grid;
+        gap: 3.2em;
+        grid-template-areas:
+            "one one four"
+            "two three four"
+        ;
+    }
+
+    .info-box {
+        display: grid;
+        column-gap: 1.5em;
+        grid-template-areas:
+            "One1 Two2"
+            "One1 Three3";
+
+    }
+
+    .small-boxes {
+        display: grid;
+        margin: 5em 0;
+        gap: 2em;
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .section-img {
+        background: var(--Soft-orange) url(./assets/images/image-web-3-desktop.jpg) no-repeat;
+        background-size: cover;
+        height: 310px;
+    }
+
+    p {
+        font-size: 16px;
+
+    }
+
+
+    .d-mobile {
+        display: none;
+    }
+
+    .d-desktop {
+        display: block;
+    }
+
+    .info-box:nth-child(3) .info-sub-box:nth-child(1) {
+
+        margin-left: -11px;
+
+    }
+
+    .small-boxes {
+        gap: 1em;
+    }
+
+    .my-5 {
+        margin: 4em 0;
+    }
+
 }
